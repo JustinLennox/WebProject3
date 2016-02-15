@@ -5,11 +5,36 @@
 <body>
 
 	<p>Please tell us who you are (Georgia residents only)</p>
-	First name <input type="text" name="firstName"> Last name <input type="text" name="lastName">
-	<br> Telephone <input type="text" name="telephone">
-	<br> City	<input type="text" name="city"> Zip code:
-        <select> <option value="volvo">30605</option> </select>
+	First name <input type="text" id="firstName" onblur="firstNameFunction()">
+	Last name <input type="text" id="lastName" onblur="lastNameFunction()">
+	<br> Telephone <input type="text" id="phone" onblur="phoneFunction()">
+	<br> City	<input type="text" id="city"> 
+	Zip code:  <select> <option value="volvo">30605</option> </select>
 	<br> <button type="button">Share personal info with our unscrupulous marketing staff </button>
+	
+	<script>
+      function firstNameFunction() {
+         var x = document.getElementById("firstName");
+         x.value = x.value.toUpperCase();
+     }
+      
+      function lastNameFunction() {
+          var x = document.getElementById("lastName");
+          x.value = x.value.toUpperCase();
+      }
+      
+      function phoneFunction() {
+    	  var x = document.getElementById("phone");
+    	  var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    	  if(x.value.match(phoneno)) {
+    	    return true;
+    	  }
+    	  else {
+    	    alert("Invalid Phone Number Entered");
+    	    return false;
+    	  }
+    	}
+	</script>
 
 </body>
 
