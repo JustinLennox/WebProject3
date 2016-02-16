@@ -665,5 +665,25 @@ var cityArray = [
  ["Zebulon",30295]
  ]
 
-
+function firstNameFunction() {
+     var x = document.getElementById("firstName");
+     x.value = x.value.charAt(0).toUpperCase() + x.value.slice(1).toLowerCase();
+ }
+      
+ function lastNameFunction() {
+     var x = document.getElementById("lastName");
+     x.value = x.value.charAt(0).toUpperCase() + x.value.slice(1).toLowerCase();
+ }
+      
+ function phoneFunction() {
+     var x = document.getElementById("phone");
+    	var num = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    	if(x.value.match(num)) {
+    	    return true;
+    	}
+    	else {
+    	    alert("Invalid Phone Number Entered");
+    	    return false;
+    	}
+ }
 
