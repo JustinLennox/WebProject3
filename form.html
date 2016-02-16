@@ -15,18 +15,18 @@
 	<script>
       function firstNameFunction() {
          var x = document.getElementById("firstName");
-         x.value = x.value.charAt(0).toUpperCase() + x.value.slice(1);
+         x.value = x.value.charAt(0).toUpperCase() + x.value.slice(1).toLowerCase();
      }
       
       function lastNameFunction() {
           var x = document.getElementById("lastName");
-          x.value = x.value.charAt(0).toUpperCase() + x.value.slice(1);
+          x.value = x.value.charAt(0).toUpperCase() + x.value.slice(1).toLowerCase();
       }
       
       function phoneFunction() {
     	  var x = document.getElementById("phone");
-    	  var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-    	  if(x.value.match(phoneno)) {
+    	  var num = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    	  if(x.value.match(num)) {
     	    return true;
     	  }
     	  else {
@@ -34,8 +34,9 @@
     	    return false;
     	  }
     	}
+      
 	</script>
-
+	
 </body>
 
 </html>
