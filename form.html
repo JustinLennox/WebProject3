@@ -12,31 +12,8 @@
 	Zip code:  <select> <option value="volvo">30605</option> </select>
 	<br> <button type="button">Share personal info with our unscrupulous marketing staff </button>
 	
-	<script>
-      function firstNameFunction() {
-         var x = document.getElementById("firstName");
-         x.value = x.value.charAt(0).toUpperCase() + x.value.slice(1).toLowerCase();
-     }
-      
-      function lastNameFunction() {
-          var x = document.getElementById("lastName");
-          x.value = x.value.charAt(0).toUpperCase() + x.value.slice(1).toLowerCase();
-      }
-      
-      function phoneFunction() {
-    	  var x = document.getElementById("phone");
-    	  var num = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-    	  if(x.value.match(num)) {
-    	    return true;
-    	  }
-    	  else {
-    	    alert("Invalid Phone Number Entered");
-    	    return false;
-    	  }
-    	}
-      
-	</script>
-	
+	<script src="form.js"></script>
+
 </body>
 
 </html>
