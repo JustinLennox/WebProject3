@@ -672,7 +672,19 @@ function firstNameFunction() {
 
 function lastNameFunction() {
 	var x = document.getElementById("lastName");
-	x.value = x.value.charAt(0).toUpperCase() + x.value.slice(1).toLowerCase();
+	//x.value = x.value.charAt(0).toUpperCase() + x.value.slice(1).toLowerCase() + x.value.length;
+	for (i = 0; i < x.value.length; i++)
+	{
+		if (i == 0)
+			x.value = x.value.charAt(0).toUpperCase() + x.value.slice(1).toLowerCase();
+			
+		if (x.value.charAt(i) == '-')
+			x.value = x.value.charAt(0).toUpperCase() + x.value.slice(1,i+1).toLowerCase() + x.value.charAt(i+1).toUpperCase() + x.value.slice(i+2).toLowerCase();
+	
+		if (x.value.charAt(i) == ' ')
+			x.value = x.value.charAt(0).toUpperCase() + x.value.slice(1,i+1).toLowerCase() + x.value.charAt(i+1).toUpperCase() + x.value.slice(i+2).toLowerCase();
+			
+	}
 }
 
 function phoneFunction() {
