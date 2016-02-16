@@ -3,17 +3,15 @@
     <link rel="stylesheet" type:"text/css" href="form.css">
 </head>
 <body>
-
+<form>
 	<p>Please tell us who you are (Georgia residents only)</p>
 	First name <input type="text" id="firstName" onblur="firstNameFunction()">
 	Last name <input type="text" id="lastName" onblur="lastNameFunction()">
 	<br> Telephone <input type="text" id="phone" onblur="phoneFunction()">
-	<br> City	<input type="text" id="city"> 
+	<br> City	<input type="text" id="city" oninput="cityFunction()">
 	Zip code:  <select> <option value="volvo">30605</option> </select>
 	<br> <button type="button">Share personal info with our unscrupulous marketing staff </button>
-	
-	<script src="form.js"></script>
-
+<form>	
+<script src="form.js"></script>
 </body>
-
 </html>

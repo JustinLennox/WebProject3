@@ -698,3 +698,7 @@ function phoneFunction() {
 		return false;
 	}
 }
+
+function cityFunction() {
+	//TO-DO function to do something when user is typing in the city input field
+}
