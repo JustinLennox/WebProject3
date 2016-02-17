@@ -700,20 +700,31 @@ function phoneFunction() {
 }
 
 function cityFunction(){
-	 var x = document.getElementById("city");
-	 var y = String(x.value);
-	 var w = y.length;
-	 var count = 0;
-	 var i;
-	 var match = 0;
-	 for (i = 0; i < cityArray.length; i++) {
+	var x = document.getElementById("city");
+	var y = String(x.value);
+	var w = y.length;
+	var count = 0;
+	var i;
+	var match = 0;
+	for (i = 0; i < cityArray.length; i++) {
 		var z = String(cityArray[i]).substring(0,w)
 		if(y.localeCompare(z)==0){
-			 count +=1;
-			 match = i;
+			count +=1;
+			match = i;
 		}
-	 }
-	 if(count==1){
-		 x.value = cityArray[match][0];
-	 }
- }
+	}
+	if(count==1){
+		x.value = cityArray[match][0];
+
+		var a = document.getElementById("zip");
+
+		for(var j = 0; j<cityArray[match].length; j++)
+		{
+			var option = document.createElement("option");
+			option.text = String(cityArray[match][j]);
+			a.add(option);
+		}
+
+	}
+
+}
