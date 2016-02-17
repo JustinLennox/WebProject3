@@ -699,6 +699,21 @@ function phoneFunction() {
 	}
 }
 
-function cityFunction() {
-	//TO-DO function to do something when user is typing in the city input field
-}
+ function cityFunction(){
+	 var x = document.getElementById("city");
+	 var y = String(x.value);
+	 var w = y.length;
+	 var count = 0;
+	 var i;
+	 var match = 0;
+	 for (i = 0; i < cityArray.length; i++) {
+		var z = String(cityArray[i]).substring(0,w)
+		if(y.localeCompare(z)==0){
+			 count +=1;
+			 match = i;
+		}
+	 }
+	 if(count==1){
+		 alert(cityArray[match][0]);
+	 }
+ }
