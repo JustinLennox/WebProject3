@@ -719,17 +719,17 @@ function cityFunction(){
 
 		var a = document.getElementById("zip");
 
-		alert("about to check if it's null");
+		//alert("about to check if it's null");
 		if(a.options.length > 0)
 		{
-			alert("in the if statement");
+			//alert("in the if statement");
 			for(var j = 0; j < a.options.length + 2; j++)
 			{
 				a.options[j] = null;
 			}
 		}
 
-		alert("adding zips");
+		//alert("adding zips");
 		for(var j = 1; j<cityArray[match].length; j++)
 		{
 			var option = document.createElement("option");
