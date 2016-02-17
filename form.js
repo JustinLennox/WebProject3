@@ -716,9 +716,21 @@ function cityFunction(){
 	if(count==1){
 		x.value = cityArray[match][0];
 
+
 		var a = document.getElementById("zip");
 
-		for(var j = 0; j<cityArray[match].length; j++)
+		alert("about to check if it's null");
+		if(a.options.length > 0)
+		{
+			alert("in the if statement");
+			for(var j = 0; j < a.options.length + 2; j++)
+			{
+				a.options[j] = null;
+			}
+		}
+
+		alert("adding zips");
+		for(var j = 1; j<cityArray[match].length; j++)
 		{
 			var option = document.createElement("option");
 			option.text = String(cityArray[match][j]);
