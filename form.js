@@ -699,7 +699,7 @@ function phoneFunction() {
 	}
 }
 
- function cityFunction(){
+function cityFunction(){
 	 var x = document.getElementById("city");
 	 var y = String(x.value);
 	 var w = y.length;
@@ -714,6 +714,6 @@ function phoneFunction() {
 		}
 	 }
 	 if(count==1){
-		 alert(cityArray[match][0]);
+		 x.value = cityArray[match][0];
 	 }
  }
