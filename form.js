@@ -665,11 +665,14 @@ var cityArray = [
                  ["Zebulon",30295]
                  ]
 
+
+//validates the first name
 function firstNameFunction() {
 	var x = document.getElementById("firstName");
 	x.value = x.value.charAt(0).toUpperCase() + x.value.slice(1).toLowerCase();
 }
 
+//validates the last name
 function lastNameFunction() {
 	var x = document.getElementById("lastName");
 	//x.value = x.value.charAt(0).toUpperCase() + x.value.slice(1).toLowerCase() + x.value.length;
@@ -677,6 +680,7 @@ function lastNameFunction() {
 	{
 		if (i == 0)
 			x.value = x.value.charAt(0).toUpperCase() + x.value.slice(1).toLowerCase();
+<<<<<<< Updated upstream
 			
 		if (x.value.charAt(i) == '-')
 			x.value = x.value.charAt(0).toUpperCase() + x.value.slice(1,i+1).toLowerCase() + x.value.charAt(i+1).toUpperCase() + x.value.slice(i+2).toLowerCase();
@@ -684,9 +688,19 @@ function lastNameFunction() {
 		if (x.value.charAt(i) == ' ')
 			x.value = x.value.charAt(0).toUpperCase() + x.value.slice(1,i+1).toLowerCase() + x.value.charAt(i+1).toUpperCase() + x.value.slice(i+2).toLowerCase();
 			
+=======
+
+		if (x.value.charAt(i) == '-')
+			x.value = x.value.charAt(0).toUpperCase() + x.value.slice(1,i+1).toLowerCase() + x.value.charAt(i+1).toUpperCase() + x.value.slice(i+2).toLowerCase();
+
+		if (x.value.charAt(i) == ' ')
+			x.value = x.value.charAt(0).toUpperCase() + x.value.slice(1,i+1).toLowerCase() + x.value.charAt(i+1).toUpperCase() + x.value.slice(i+2).toLowerCase();
+
+>>>>>>> Stashed changes
 	}
 }
 
+//validates the phone number
 function phoneFunction() {
 	var x = document.getElementById("phone");
 	var num = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
@@ -699,8 +713,27 @@ function phoneFunction() {
 	}
 }
 
+<<<<<<< Updated upstream
 function cityFunction(){
 	var x = document.getElementById("city");
+=======
+//autocompletes the city and updates the zip codes
+function cityFunction(){
+	var x = document.getElementById("city");
+	
+	var a = document.getElementById("zip");
+
+	//alert("about to check if it's null");
+	if(a.options.length > 0)
+	{
+		//alert("in the if statement");
+		for(var j = 0; j < a.options.length; j++)
+		{
+			a.remove(a.j);
+		}
+	}
+	
+>>>>>>> Stashed changes
 	var y = String(x.value);
 	var w = y.length;
 	var count = 0;
@@ -713,6 +746,7 @@ function cityFunction(){
 			match = i;
 		}
 	}
+<<<<<<< Updated upstream
 	if(count==1){
 		x.value = cityArray[match][0];
 
@@ -729,6 +763,16 @@ function cityFunction(){
 			}
 		}
 
+=======
+	if(count == 0)
+	{
+		alert("No such city with specified prefix.");
+	}
+	if(count == 1){
+		x.value = cityArray[match][0];
+
+
+>>>>>>> Stashed changes
 		//alert("adding zips");
 		for(var j = 1; j<cityArray[match].length; j++)
 		{
@@ -739,4 +783,8 @@ function cityFunction(){
 
 	}
 
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes
